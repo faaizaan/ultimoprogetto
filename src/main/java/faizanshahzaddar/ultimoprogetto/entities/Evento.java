@@ -1,6 +1,7 @@
 package faizanshahzaddar.ultimoprogetto.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -8,6 +9,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "eventi")
+@JsonIgnoreProperties({""})
 public class Evento {
 
     @Id

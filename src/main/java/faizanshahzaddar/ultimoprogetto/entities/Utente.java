@@ -1,6 +1,7 @@
 package faizanshahzaddar.ultimoprogetto.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "utenti")
+@JsonIgnoreProperties({"accountNonExpired", "accountNonLocked", "authorities", "credentialsNonExpired", "enabled"})
 public class Utente implements UserDetails {
 
     @Id
